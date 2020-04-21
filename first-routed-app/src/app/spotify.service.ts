@@ -25,7 +25,26 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/tracks/${id}`;
     const headers = new HttpHeaders({
       Authorization:
-        'Bearer BQA-qP4GniE6QqH5FnsINpHyg6zx29VzsN8rTqQijPoAsIyYu5FbVv6A0ygpfuuUzSM_6gkLoWgpNengBR0m2HK5FFJuT2LWQs3KVSh47S7rHMwoGRWkfv9MurznlDmU-uULSM_RUPFfq_cdm4y8wquks-rVDm4DFtU '
+        'Bearer BQAg2FtJqSqv5AYpXQua1wbj4bmL1GYxbhxQCyPKMYvExU0LlEHbHcaPkhu3aShLOOfACRlBCFt9SW5 '
+    });
+
+    return this.http.get(url, { headers });
+  }
+
+   searchArtist(query: string) {
+    const url = `https://api.spotify.com/v1/search?q=${query}&type=artist`;
+    const headers = new HttpHeaders({Authorization: environment.oauthToken});
+
+
+    let obsArtists = this.http.get(url, { headers });
+    return obsArtists;
+ //Ritorno un observable ai componenti che richiedono il servizio
+  }
+   getArtist(id: string) {
+    const url = `https://api.spotify.com/v1/artists/${id}`;
+    const headers = new HttpHeaders({
+      Authorization:
+        'Bearer BQAg2FtJqSqv5AYpXQua1wbj4bmL1GYxbhxQCyPKMYvExU0LlEHbHcaPkhu3aShLOOfACRlBCFt9SW5'
     });
 
     return this.http.get(url, { headers });

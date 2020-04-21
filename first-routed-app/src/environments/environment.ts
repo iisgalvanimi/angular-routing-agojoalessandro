@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  oauthToken: "Bearer BQA-qP4GniE6QqH5FnsINpHyg6zx29VzsN8rTqQijPoAsIyYu5FbVv6A0ygpfuuUzSM_6gkLoWgpNengBR0m2HK5FFJuT2LWQs3KVSh47S7rHMwoGRWkfv9MurznlDmU-uULSM_RUPFfq_cdm4y8wquks-rVDm4DFtU"
-};
-
+  oauthToken: "Bearer BQAg2FtJqSqv5AYpXQua1wbj4bmL1GYxbhxQCyPKMYvExU0LlEHbHcaPkhu3aShLOOfACRlBCFt9SW5"
+}
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
