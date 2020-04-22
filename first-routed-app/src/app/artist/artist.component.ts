@@ -37,7 +37,7 @@ export class ArtistComponent implements OnInit {
     let artistId = params.get('id'); //Ottengo l'id dai parametri
     console.log (artistId); //Stampo su console
     //spotifyServiceObs va dichiarato
-    this.spotifyServiceObs = this.service.getTrack(artistId) ;
+    this.spotifyServiceObs = this.service.getArtist(artistId) ;
     this.spotifyServiceObs.subscribe((data)=>this.artist = data)
   }
 
