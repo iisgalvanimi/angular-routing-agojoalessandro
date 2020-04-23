@@ -37,7 +37,7 @@ export class AlbumComponent implements OnInit {
     let albumId = params.get('id'); //Ottengo l'id dai parametri
     console.log (albumId); //Stampo su console
     //spotifyServiceObs va dichiarato
-    this.spotifyServiceObs = this.service.getArtist(albumId) ;
+    this.spotifyServiceObs = this.service.getAlbum(albumId) ;
     this.spotifyServiceObs.subscribe((data)=>this.album = data)
   }
 
